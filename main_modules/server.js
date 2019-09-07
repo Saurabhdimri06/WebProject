@@ -14,6 +14,7 @@ initializePassport(
   id => users.find(user => user.id === id)
 )
 
+app.use(express.static('public'))
 const users = []
 app.engine('handlebars', hbs())
 app.set('view engine', 'handlebars')
@@ -28,6 +29,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(methodOverride('_method'))
+
 
 app.get('/', checkAuthenticated, (req, res) => {
   res.render('index', { name: req.user.name })
