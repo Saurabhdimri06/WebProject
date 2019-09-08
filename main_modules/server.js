@@ -14,7 +14,8 @@ initializePassport(
   id => users.find(user => user.id === id)
 )
 
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'))        //to access imaages form public folder
+
 const users = []
 app.engine('handlebars', hbs())
 app.set('view engine', 'handlebars')
