@@ -1,4 +1,4 @@
 From node
 
-ADD project /project/
+ADD . /project/
 WORKDIR /project/
