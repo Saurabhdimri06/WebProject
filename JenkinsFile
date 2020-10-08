@@ -3,9 +3,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('restaurant_frontend') {
-                }
-                sh 'pwd'
                 sh 'npm build'
             }
         }
