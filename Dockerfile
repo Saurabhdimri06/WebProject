@@ -1,4 +1,4 @@
 From node
 
-ADD . /project/
+ADD checklist-app /project/
 WORKDIR /project/
