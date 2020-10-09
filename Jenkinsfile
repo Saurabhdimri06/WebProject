@@ -5,6 +5,7 @@ pipeline {
             agent { dockerfile true }
             steps {
                 sh 'npm --version'
+                sh 'npm build'
             }
         }
     }
