@@ -17,6 +17,7 @@ pipeline {
        docker.withRegistry( '', registryCredential ){
             def customImage = docker.build("always2kspiner/webproject:${env.BUILD_ID}")
             customImage.push()
+                }
             }
         }
     }
