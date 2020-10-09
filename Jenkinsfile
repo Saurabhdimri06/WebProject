@@ -14,9 +14,11 @@ pipeline {
     stage('Deploy'){
         agent any
         steps {
+            script {
        docker.withRegistry( '', registryCredential ){
             def customImage = docker.build("always2kspiner/webproject:${env.BUILD_ID}")
             customImage.push()
+                    }    
                 }
             }
         }
