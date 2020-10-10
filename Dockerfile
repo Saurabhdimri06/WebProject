@@ -1,7 +1,7 @@
 From node
 
-ADD checklist-app /project/
-WORKDIR /project/
+ADD School-web-application-master /project
+WORKDIR /project
 
 RUN npm install
 
