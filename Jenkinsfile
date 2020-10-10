@@ -7,6 +7,7 @@ pipeline {
         stage('Build') {
             agent { dockerfile true }
             steps {
+                sh 'pwd'
                 sh 'npm --version'
                 sh 'npm build'
                 sh 'node app.js'
