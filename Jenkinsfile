@@ -7,6 +7,7 @@ pipeline {
         stage('Build') {
             agent { dockerfile true }
             steps {
+                sh 'cd School-web-application-master'
                 sh 'pwd'
                 sh 'npm --version'
                 sh 'npm build'
