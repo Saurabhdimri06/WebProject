@@ -7,11 +7,8 @@ pipeline {
         stage('Build') {
             agent { dockerfile true }
             steps {
-                sh 'cd /var/lib/jenkins/workspace/webproject/School-web-application-master'
                 sh 'pwd'
-                sh 'npm install'
                 sh 'npm build'
-                sh 'node app.js'
             }
         }
     stage('Deploy'){
