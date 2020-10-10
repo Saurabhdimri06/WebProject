@@ -9,7 +9,7 @@ pipeline {
             steps {
                 sh 'cd School-web-application-master'
                 sh 'pwd'
-                sh 'npm --version'
+                sh 'npm install'
                 sh 'npm build'
                 sh 'node app.js'
             }
