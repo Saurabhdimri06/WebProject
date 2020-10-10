@@ -6,4 +6,4 @@ WORKDIR /project
 RUN npm install
 RUN npm build
 
-EXPOSE 3000/tcp
+EXPOSE 3000
